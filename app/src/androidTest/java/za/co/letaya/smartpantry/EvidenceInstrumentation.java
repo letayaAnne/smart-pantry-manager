@@ -183,7 +183,7 @@ public final class EvidenceInstrumentation extends Instrumentation {
       android.view.accessibility.AccessibilityNodeInfo window = getUiAutomation().getRootInActiveWindow();
       boolean clicked = false;
       for (android.view.accessibility.AccessibilityNodeInfo node : window.findAccessibilityNodeInfosByText("Delete")) {
-        if ("Delete".contentEquals(node.getText()) && node.isClickable()) {
+        if ("Delete".equalsIgnoreCase(String.valueOf(node.getText())) && node.isClickable()) {
           clicked = node.performAction(android.view.accessibility.AccessibilityNodeInfo.ACTION_CLICK);
           break;
         }
