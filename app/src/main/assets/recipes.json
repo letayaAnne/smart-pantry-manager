@@ -1,0 +1,657 @@
+[
+  {
+    "name": "Soft cheddar scramble",
+    "description": "A comforting, protein-rich breakfast.",
+    "minutes": 8,
+    "ingredients": [
+      {
+        "name": "egg",
+        "quantity": "2",
+        "unit": "item"
+      },
+      {
+        "name": "cheddar",
+        "quantity": "30",
+        "unit": "g"
+      },
+      {
+        "name": "butter",
+        "quantity": "5",
+        "unit": "g"
+      }
+    ],
+    "steps": [
+      "Beat the eggs and grate the cheddar.",
+      "Melt the butter in a non-stick pan over low heat.",
+      "Add the eggs and stir gently until fully set. Fold in the cheese and serve hot."
+    ]
+  },
+  {
+    "name": "Golden egg toast",
+    "description": "Simple ingredients, a satisfying start.",
+    "minutes": 10,
+    "ingredients": [
+      {
+        "name": "egg",
+        "quantity": "1",
+        "unit": "item"
+      },
+      {
+        "name": "bread",
+        "quantity": "1",
+        "unit": "slice"
+      },
+      {
+        "name": "butter",
+        "quantity": "5",
+        "unit": "g"
+      }
+    ],
+    "steps": [
+      "Cut a small circle from the centre of the bread.",
+      "Melt butter over medium-low heat and add the bread and cut-out.",
+      "Crack the egg into the hole. Cook gently, then carefully turn and cook until the egg is fully set."
+    ]
+  },
+  {
+    "name": "Spinach and feta omelette",
+    "description": "A little Mediterranean inspiration.",
+    "minutes": 12,
+    "ingredients": [
+      {
+        "name": "egg",
+        "quantity": "2",
+        "unit": "item"
+      },
+      {
+        "name": "spinach",
+        "quantity": "40",
+        "unit": "g"
+      },
+      {
+        "name": "feta",
+        "quantity": "30",
+        "unit": "g"
+      },
+      {
+        "name": "oil",
+        "quantity": "5",
+        "unit": "ml"
+      }
+    ],
+    "steps": [
+      "Wash and finely chop the spinach. Beat the eggs.",
+      "Heat the oil and wilt the spinach. Pour in the eggs.",
+      "Scatter over crumbled feta. Cook gently until fully set, fold and serve."
+    ]
+  },
+  {
+    "name": "Potato and cheddar skillet",
+    "description": "A warm meal built around a favourite vegetable.",
+    "minutes": 25,
+    "ingredients": [
+      {
+        "name": "potato",
+        "quantity": "200",
+        "unit": "g"
+      },
+      {
+        "name": "cheddar",
+        "quantity": "30",
+        "unit": "g"
+      },
+      {
+        "name": "oil",
+        "quantity": "10",
+        "unit": "ml"
+      },
+      {
+        "name": "water",
+        "quantity": "50",
+        "unit": "ml"
+      }
+    ],
+    "steps": [
+      "Scrub the potato and cut into small cubes.",
+      "Heat oil in a lidded pan, add potato and cook for 5 minutes.",
+      "Add the measured water, cover and cook gently until tender, about 12 minutes.",
+      "Remove the lid to evaporate remaining water. Add grated cheddar and let it melt."
+    ]
+  },
+  {
+    "name": "Crisp potato wedges",
+    "description": "An easy oven side with no hidden extras.",
+    "minutes": 35,
+    "ingredients": [
+      {
+        "name": "potato",
+        "quantity": "250",
+        "unit": "g"
+      },
+      {
+        "name": "oil",
+        "quantity": "10",
+        "unit": "ml"
+      },
+      {
+        "name": "salt",
+        "quantity": "1",
+        "unit": "g"
+      }
+    ],
+    "steps": [
+      "Heat the oven to 210°C. Scrub potatoes and cut into thin wedges.",
+      "Toss with the measured oil and salt. Spread on a baking tray.",
+      "Bake for 25–30 minutes, turning halfway, until tender inside and golden outside."
+    ]
+  },
+  {
+    "name": "Creamy mashed potato",
+    "description": "Comforting and economical.",
+    "minutes": 30,
+    "ingredients": [
+      {
+        "name": "potato",
+        "quantity": "250",
+        "unit": "g"
+      },
+      {
+        "name": "water",
+        "quantity": "750",
+        "unit": "ml"
+      },
+      {
+        "name": "milk",
+        "quantity": "50",
+        "unit": "ml"
+      },
+      {
+        "name": "butter",
+        "quantity": "10",
+        "unit": "g"
+      }
+    ],
+    "steps": [
+      "Peel and dice the potato. Place in a small saucepan with the measured water.",
+      "Simmer until tender, about 15–20 minutes, then drain.",
+      "Mash with butter and warm milk until smooth."
+    ]
+  },
+  {
+    "name": "Potato and egg hash",
+    "description": "A filling one-pan meal.",
+    "minutes": 25,
+    "ingredients": [
+      {
+        "name": "potato",
+        "quantity": "200",
+        "unit": "g"
+      },
+      {
+        "name": "egg",
+        "quantity": "2",
+        "unit": "item"
+      },
+      {
+        "name": "onion",
+        "quantity": "50",
+        "unit": "g"
+      },
+      {
+        "name": "oil",
+        "quantity": "10",
+        "unit": "ml"
+      },
+      {
+        "name": "water",
+        "quantity": "50",
+        "unit": "ml"
+      }
+    ],
+    "steps": [
+      "Dice potato and onion finely.",
+      "Heat oil, add the vegetables and stir for 5 minutes.",
+      "Add the measured water, cover and cook gently until potatoes are tender.",
+      "Uncover, let excess water evaporate, add beaten eggs and stir until fully cooked."
+    ]
+  },
+  {
+    "name": "Feta potato bowl",
+    "description": "Warm potato meets tangy cheese.",
+    "minutes": 30,
+    "ingredients": [
+      {
+        "name": "potato",
+        "quantity": "250",
+        "unit": "g"
+      },
+      {
+        "name": "water",
+        "quantity": "750",
+        "unit": "ml"
+      },
+      {
+        "name": "feta",
+        "quantity": "40",
+        "unit": "g"
+      },
+      {
+        "name": "oil",
+        "quantity": "5",
+        "unit": "ml"
+      }
+    ],
+    "steps": [
+      "Scrub and cube the potato. Simmer in the measured water until tender.",
+      "Drain thoroughly and place in a bowl.",
+      "Toss with oil and crumble feta over the warm potatoes."
+    ]
+  },
+  {
+    "name": "Vegetable soy noodles",
+    "description": "Quick cooking with a savoury flavour.",
+    "minutes": 15,
+    "ingredients": [
+      {
+        "name": "noodles",
+        "quantity": "80",
+        "unit": "g"
+      },
+      {
+        "name": "water",
+        "quantity": "600",
+        "unit": "ml"
+      },
+      {
+        "name": "carrot",
+        "quantity": "50",
+        "unit": "g"
+      },
+      {
+        "name": "pepper",
+        "quantity": "50",
+        "unit": "g"
+      },
+      {
+        "name": "oil",
+        "quantity": "10",
+        "unit": "ml"
+      },
+      {
+        "name": "soy sauce",
+        "quantity": "15",
+        "unit": "ml"
+      }
+    ],
+    "steps": [
+      "Slice the carrot and pepper thinly.",
+      "Cook plain dry noodles in the measured water according to the packet, then drain.",
+      "Heat oil in a pan and stir-fry the vegetables until tender.",
+      "Add noodles and soy sauce. Toss until hot throughout."
+    ]
+  },
+  {
+    "name": "Egg fried noodles",
+    "description": "A quick meal with a little extra protein.",
+    "minutes": 15,
+    "ingredients": [
+      {
+        "name": "noodles",
+        "quantity": "80",
+        "unit": "g"
+      },
+      {
+        "name": "water",
+        "quantity": "600",
+        "unit": "ml"
+      },
+      {
+        "name": "egg",
+        "quantity": "1",
+        "unit": "item"
+      },
+      {
+        "name": "oil",
+        "quantity": "10",
+        "unit": "ml"
+      },
+      {
+        "name": "soy sauce",
+        "quantity": "10",
+        "unit": "ml"
+      }
+    ],
+    "steps": [
+      "Cook plain dry noodles in the measured water according to the packet and drain.",
+      "Heat oil in a pan, add beaten egg and scramble until fully set.",
+      "Add the noodles and soy sauce. Toss until hot throughout."
+    ]
+  },
+  {
+    "name": "Garlic spinach noodles",
+    "description": "A simple vegetable-led bowl.",
+    "minutes": 15,
+    "ingredients": [
+      {
+        "name": "noodles",
+        "quantity": "80",
+        "unit": "g"
+      },
+      {
+        "name": "water",
+        "quantity": "600",
+        "unit": "ml"
+      },
+      {
+        "name": "spinach",
+        "quantity": "60",
+        "unit": "g"
+      },
+      {
+        "name": "garlic",
+        "quantity": "1",
+        "unit": "item"
+      },
+      {
+        "name": "oil",
+        "quantity": "10",
+        "unit": "ml"
+      }
+    ],
+    "steps": [
+      "Peel and mince one garlic clove. Wash and chop spinach.",
+      "Cook noodles in the measured water according to the packet and drain.",
+      "Heat oil gently, cook garlic briefly without burning, then wilt spinach.",
+      "Add noodles and toss until hot throughout."
+    ]
+  },
+  {
+    "name": "Cheddar vegetable noodles",
+    "description": "Creamy comfort for a busy evening.",
+    "minutes": 18,
+    "ingredients": [
+      {
+        "name": "noodles",
+        "quantity": "80",
+        "unit": "g"
+      },
+      {
+        "name": "water",
+        "quantity": "600",
+        "unit": "ml"
+      },
+      {
+        "name": "carrot",
+        "quantity": "50",
+        "unit": "g"
+      },
+      {
+        "name": "cheddar",
+        "quantity": "40",
+        "unit": "g"
+      },
+      {
+        "name": "milk",
+        "quantity": "50",
+        "unit": "ml"
+      }
+    ],
+    "steps": [
+      "Grate the carrot and cheddar.",
+      "Cook noodles with the carrot in the measured water until tender, then drain.",
+      "Return to low heat. Stir in milk and cheddar until melted and hot."
+    ]
+  },
+  {
+    "name": "Cheddar toastie",
+    "description": "A crisp, golden classic.",
+    "minutes": 10,
+    "ingredients": [
+      {
+        "name": "bread",
+        "quantity": "2",
+        "unit": "slice"
+      },
+      {
+        "name": "cheddar",
+        "quantity": "40",
+        "unit": "g"
+      },
+      {
+        "name": "butter",
+        "quantity": "10",
+        "unit": "g"
+      }
+    ],
+    "steps": [
+      "Spread butter on one side of each bread slice.",
+      "Sandwich grated cheddar between the unbuttered sides.",
+      "Toast in a pan over medium-low heat, turning carefully, until both sides are golden and cheese has melted."
+    ]
+  },
+  {
+    "name": "Tomato feta toast",
+    "description": "Bright flavour on a crunchy base.",
+    "minutes": 10,
+    "ingredients": [
+      {
+        "name": "bread",
+        "quantity": "2",
+        "unit": "slice"
+      },
+      {
+        "name": "tomato",
+        "quantity": "100",
+        "unit": "g"
+      },
+      {
+        "name": "feta",
+        "quantity": "30",
+        "unit": "g"
+      },
+      {
+        "name": "oil",
+        "quantity": "5",
+        "unit": "ml"
+      }
+    ],
+    "steps": [
+      "Wash and dice the tomato. Toast the bread.",
+      "Brush toast with the measured oil.",
+      "Top with tomato and crumbled feta. Serve immediately."
+    ]
+  },
+  {
+    "name": "Savoury eggy bread",
+    "description": "A practical way to use older bread.",
+    "minutes": 12,
+    "ingredients": [
+      {
+        "name": "bread",
+        "quantity": "2",
+        "unit": "slice"
+      },
+      {
+        "name": "egg",
+        "quantity": "1",
+        "unit": "item"
+      },
+      {
+        "name": "milk",
+        "quantity": "30",
+        "unit": "ml"
+      },
+      {
+        "name": "butter",
+        "quantity": "10",
+        "unit": "g"
+      }
+    ],
+    "steps": [
+      "Beat egg and milk in a shallow bowl.",
+      "Briefly dip both sides of each bread slice into the mixture.",
+      "Melt butter in a pan and cook the bread on both sides until golden and the egg is fully cooked."
+    ]
+  },
+  {
+    "name": "Cinnamon toast crunch",
+    "description": "A quick sweet treat inspired by Le’taya’s favourites.",
+    "minutes": 10,
+    "ingredients": [
+      {
+        "name": "bread",
+        "quantity": "2",
+        "unit": "slice"
+      },
+      {
+        "name": "butter",
+        "quantity": "10",
+        "unit": "g"
+      },
+      {
+        "name": "sugar",
+        "quantity": "10",
+        "unit": "g"
+      },
+      {
+        "name": "cinnamon",
+        "quantity": "1",
+        "unit": "g"
+      }
+    ],
+    "steps": [
+      "Mix sugar and cinnamon. Cut bread into bite-size squares.",
+      "Melt butter in a pan over medium-low heat. Add bread and turn until crisp.",
+      "Sprinkle over cinnamon sugar, toss briefly and serve warm."
+    ]
+  },
+  {
+    "name": "Warm milky tea",
+    "description": "A familiar pause in a busy day.",
+    "minutes": 5,
+    "ingredients": [
+      {
+        "name": "tea bag",
+        "quantity": "1",
+        "unit": "item"
+      },
+      {
+        "name": "water",
+        "quantity": "200",
+        "unit": "ml"
+      },
+      {
+        "name": "milk",
+        "quantity": "50",
+        "unit": "ml"
+      }
+    ],
+    "steps": [
+      "Boil the measured water and pour over the tea bag in a mug.",
+      "Steep for 3–4 minutes, then remove the tea bag.",
+      "Stir in the milk and enjoy. No sugar is assumed."
+    ]
+  },
+  {
+    "name": "Carrot and potato soup",
+    "description": "A small batch of comforting vegetable soup.",
+    "minutes": 30,
+    "ingredients": [
+      {
+        "name": "potato",
+        "quantity": "150",
+        "unit": "g"
+      },
+      {
+        "name": "carrot",
+        "quantity": "100",
+        "unit": "g"
+      },
+      {
+        "name": "onion",
+        "quantity": "50",
+        "unit": "g"
+      },
+      {
+        "name": "oil",
+        "quantity": "5",
+        "unit": "ml"
+      },
+      {
+        "name": "water",
+        "quantity": "500",
+        "unit": "ml"
+      },
+      {
+        "name": "salt",
+        "quantity": "1",
+        "unit": "g"
+      }
+    ],
+    "steps": [
+      "Peel and finely dice the vegetables.",
+      "Heat oil in a saucepan and soften the onion.",
+      "Add potato, carrot, measured water and salt. Simmer for about 20 minutes until very tender.",
+      "Mash carefully in the saucepan for a chunky soup."
+    ]
+  },
+  {
+    "name": "Tomato scrambled eggs",
+    "description": "A simple, gently cooked skillet.",
+    "minutes": 12,
+    "ingredients": [
+      {
+        "name": "egg",
+        "quantity": "2",
+        "unit": "item"
+      },
+      {
+        "name": "tomato",
+        "quantity": "100",
+        "unit": "g"
+      },
+      {
+        "name": "oil",
+        "quantity": "5",
+        "unit": "ml"
+      }
+    ],
+    "steps": [
+      "Wash and dice the tomato. Beat the eggs.",
+      "Heat oil and soften the tomato for 3–4 minutes.",
+      "Add eggs and stir gently until fully set. Serve hot."
+    ]
+  },
+  {
+    "name": "Spinach cheddar toast",
+    "description": "A warm vegetable-and-cheese snack.",
+    "minutes": 12,
+    "ingredients": [
+      {
+        "name": "bread",
+        "quantity": "2",
+        "unit": "slice"
+      },
+      {
+        "name": "spinach",
+        "quantity": "50",
+        "unit": "g"
+      },
+      {
+        "name": "cheddar",
+        "quantity": "30",
+        "unit": "g"
+      },
+      {
+        "name": "butter",
+        "quantity": "5",
+        "unit": "g"
+      }
+    ],
+    "steps": [
+      "Wash and chop spinach. Melt butter in a pan and wilt spinach.",
+      "Toast the bread and top with spinach and grated cheddar.",
+      "Place under a hot grill briefly until cheese melts; watch closely."
+    ]
+  }
+]
