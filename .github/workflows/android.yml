@@ -19,11 +19,26 @@ jobs:
       - name: Install SDK packages
         run: sdkmanager 'platforms;android-35' 'build-tools;35.0.0'
       - name: Test, inspect and build
-        run: bash ./gradlew testDebugUnitTest lintDebug assembleDebug
+        run: bash ./gradlew testDebugUnitTest lintDebug assembleDebug assembleDebugAndroidTest
+      - name: Enable KVM
+        run: |
+          echo 'KERNEL=="kvm", GROUP="kvm", MODE="0666", OPTIONS+="static_node=kvm"' | sudo tee /etc/udev/rules.d/99-kvm4all.rules
+          sudo udevadm control --reload-rules
+          sudo udevadm trigger --name-match=kvm
+      - name: Run app and collect genuine evidence
+        uses: reactivecircus/android-emulator-runner@v2
+        with:
+          api-level: 29
+          arch: x86_64
+          profile: pixel_2
+          disable-animations: true
+          script: bash scripts/run-evidence.sh
       - uses: actions/upload-artifact@v4
+        if: always()
         with:
           name: SmartPantry-APK-and-test-results
           path: |
             app/build/outputs/apk/debug/app-debug.apk
             app/build/reports/tests/testDebugUnitTest/
             app/build/reports/lint-results-debug.html
+            evidence/

@@ -180,12 +180,16 @@ public final class EvidenceInstrumentation extends Instrumentation {
       edit = open(EditIngredientActivity.class, id("butter"));
       click(edit, "Delete ingredient");
       screenshot("11_delete_confirmation");
-      // UIAutomator is unnecessary: inject a Back key to cancel, then test DB delete separately.
-      getUiAutomation()
-          .performGlobalAction(
-              android.accessibilityservice.AccessibilityService.GLOBAL_ACTION_BACK);
-      pause(300);
-      db.delete(id("butter"));
+      android.view.accessibility.AccessibilityNodeInfo window = getUiAutomation().getRootInActiveWindow();
+      boolean clicked = false;
+      for (android.view.accessibility.AccessibilityNodeInfo node : window.findAccessibilityNodeInfosByText("Delete")) {
+        if ("Delete".contentEquals(node.getText()) && node.isClickable()) {
+          clicked = node.performAction(android.view.accessibility.AccessibilityNodeInfo.ACTION_CLICK);
+          break;
+        }
+      }
+      check(clicked, "Delete confirmation clicked through UI");
+      waitCount(2);
       check(!ready(), "Deleting required ingredient excludes recipe");
       check(db.pantry().size() == 2, "Delete retains other rows");
       open(PantryActivity.class, 0);
