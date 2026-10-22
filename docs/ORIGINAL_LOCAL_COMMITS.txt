@@ -1,0 +1,45 @@
+bf9ef6337207dfe8ecf31ed2093452418368504a
+Author: Codex <codex@local.invalid>
+Date: 2026-10-22T04:07:14-07:00
+Establish Android project and document matching and storage decisions
+
+88560e0429fa095ae3bbc848d3f396d19baef5bc
+Author: Codex <codex@local.invalid>
+Date: 2026-10-22T04:07:56-07:00
+Implement decimal quantities, unit conversion and strict recipe matching
+
+9d78514a6008d792013a11335aec826335cba290
+Author: Codex <codex@local.invalid>
+Date: 2026-10-22T04:08:39-07:00
+Add thirty matching and validation regression tests
+
+25a73872e9c8370eaa840ed3d8d5e7bbd1d7bfbe
+Author: Codex <codex@local.invalid>
+Date: 2026-10-22T04:10:12-07:00
+Seed twenty personalised recipes with explicit ingredient quantities
+
+9da6f49cba6397d050023b65ba1d3f5d426149f3
+Author: Codex <codex@local.invalid>
+Date: 2026-10-22T04:10:53-07:00
+Add SQLite persistence, validated seeding and pantry CRUD
+
+ddaabf5578111bc11930ac9214237184f241173f
+Author: Codex <codex@local.invalid>
+Date: 2026-10-22T04:12:37-07:00
+Build cream and blush navigation, reusable views and pantry adapter
+
+d389ee360614e4f058f6ebc8ddd00b6841b6d8e5
+Author: Codex <codex@local.invalid>
+Date: 2026-10-22T04:14:30-07:00
+Implement validated pantry editing, recipe screens and persistent preferences
+
+37c82b2df0f84c734bc22d4881fa515ca8d0e25a
+Author: Codex <codex@local.invalid>
+Date: 2026-10-22T04:15:52-07:00
+Add portable Gradle wrapper, CI build and Samsung acceptance checks
+
+3e60aff4ceb34110bfec7fbd9872b60aa42f4225
+Author: Codex <codex@local.invalid>
+Date: 2026-10-22T04:18:35-07:00
+Add on-device evidence checks and format Java sources for readability
+

@@ -94,6 +94,17 @@ public final class EvidenceInstrumentation extends Instrumentation {
     bitmap.recycle();
   }
 
+  private void scrollToBottom(View view) {
+    if (view instanceof ScrollView) {
+      ((ScrollView) view).fullScroll(View.FOCUS_DOWN);
+      return;
+    }
+    if (view instanceof ViewGroup) {
+      ViewGroup group = (ViewGroup) view;
+      for (int i = 0; i < group.getChildCount(); i++) scrollToBottom(group.getChildAt(i));
+    }
+  }
+
   private void waitCount(int count) {
     for (int n = 0; n < 50; n++) {
       if (db.pantry().size() == count) return;
@@ -151,8 +162,10 @@ public final class EvidenceInstrumentation extends Instrumentation {
       screenshot("05_pantry_list");
       open(RecipesActivity.class, 0);
       screenshot("06_strict_suggestions");
-      open(RecipeDetailActivity.class, scramble().id);
+      Activity detail = open(RecipeDetailActivity.class, scramble().id);
       screenshot("07_recipe_detail");
+      runOnMainSync(() -> scrollToBottom(detail.getWindow().getDecorView()));
+      screenshot("07b_recipe_method");
       edit = open(EditIngredientActivity.class, id("eggs"));
       fill(edit, "eggs", "1", "item");
       screenshot("08_edit_ingredient");
