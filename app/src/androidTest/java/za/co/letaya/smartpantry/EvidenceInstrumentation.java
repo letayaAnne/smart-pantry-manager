@@ -28,7 +28,7 @@ public final class EvidenceInstrumentation extends Instrumentation {
   }
 
   private Activity open(Class<?> type, long id) {
-    Intent i = new Intent(getTargetContext(), type).addFlags(Intent.FLAG_ACTIVITY_NEW_TASK);
+    Intent i = new Intent(getTargetContext(), type).addFlags(Intent.FLAG_ACTIVITY_NEW_TASK | Intent.FLAG_ACTIVITY_CLEAR_TASK);
     if (type == EditIngredientActivity.class) i.putExtra("ingredient_id", id);
     if (type == RecipeDetailActivity.class) i.putExtra("recipe_id", id);
     Activity a = startActivitySync(i);
