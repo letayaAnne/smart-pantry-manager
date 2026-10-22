@@ -24,13 +24,13 @@ public final class EditIngredientActivity extends BaseActivity {
         itemId == 0 ? "Add a little goodness" : "Edit your ingredient",
         "Record each batch as you find it in your kitchen.",
         true);
-    name = Ui.field(body, "Ingredient name", "e.g. eggs, potato or cheddar", 1001);
+    name = Ui.field(body, "Ingredient name", "e.g. eggs, potato or cheddar", R.id.ingredient_name);
     name.setInputType(InputType.TYPE_CLASS_TEXT | InputType.TYPE_TEXT_FLAG_CAP_SENTENCES);
-    quantity = Ui.field(body, "Quantity", "e.g. 2 or 0.5", 1002);
+    quantity = Ui.field(body, "Quantity", "e.g. 2 or 0.5", R.id.ingredient_quantity);
     quantity.setInputType(InputType.TYPE_CLASS_NUMBER | InputType.TYPE_NUMBER_FLAG_DECIMAL);
     body.addView(Ui.text(this, "Unit", 14, Ui.INK));
     unit = new Spinner(this);
-    unit.setId(1003);
+    unit.setId(R.id.ingredient_unit);
     unit.setContentDescription("Ingredient unit");
     ArrayAdapter<String> choices =
         new ArrayAdapter<>(this, android.R.layout.simple_spinner_item, units);
@@ -39,7 +39,7 @@ public final class EditIngredientActivity extends BaseActivity {
     unit.setMinimumHeight(Ui.dp(this, 52));
     body.addView(unit);
     Ui.space(body, 12);
-    expiry = Ui.field(body, "Expiry date (optional)", "YYYY-MM-DD", 1004);
+    expiry = Ui.field(body, "Expiry date (optional)", "YYYY-MM-DD", R.id.ingredient_expiry);
     expiry.setInputType(InputType.TYPE_CLASS_DATETIME | InputType.TYPE_DATETIME_VARIATION_DATE);
     body.addView(
         Ui.text(

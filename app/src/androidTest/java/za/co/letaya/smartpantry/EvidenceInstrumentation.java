@@ -72,9 +72,9 @@ public final class EvidenceInstrumentation extends Instrumentation {
   private void fill(Activity a, String name, String amount, String unit) {
     runOnMainSync(
         () -> {
-          ((EditText) a.findViewById(1001)).setText(name);
-          ((EditText) a.findViewById(1002)).setText(amount);
-          ((Spinner) a.findViewById(1003))
+          ((EditText) a.findViewById(R.id.ingredient_name)).setText(name);
+          ((EditText) a.findViewById(R.id.ingredient_quantity)).setText(amount);
+          ((Spinner) a.findViewById(R.id.ingredient_unit))
               .setSelection(new ArrayList<>(Matcher.UNITS.keySet()).indexOf(unit));
         });
   }
