@@ -1,0 +1,13 @@
+# Design decisions — 22 October 2026
+- Five Java Activities; explicit Intents pass database IDs rather than stale objects.
+- SQLite tables: pantry_item, recipe, recipe_ingredient. Recipe ingredients relate to recipe IDs.
+- Decimal quantities stored as text and calculated with BigDecimal, avoiding binary rounding.
+- Supported units: g, kg, ml, l, tsp (5 ml), tbsp (15 ml), item and slice.
+- Convert only within a dimension. Never guess a potato's weight or cheese density.
+- Aliases are explicit; feta and cheddar are distinct. Unrecognised ingredients remain distinct.
+- Sum duplicate pantry batches; exclude expired batches. Today's date is still usable.
+- Aggregate duplicate recipe requirements before comparing totals.
+- Keep pantry empty on first run; seed twenty recipes once, in the database creation transaction.
+- Refresh lists in onResume; use a serial background executor for database work.
+- Use accessible dark text, rounded controls, serif headings and subtle drawn curves.
+- The report must distinguish tested observations from checks pending on the Samsung A23.
