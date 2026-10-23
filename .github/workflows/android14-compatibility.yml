@@ -1,0 +1,64 @@
+name: Verify distributed APK on Android 14
+on:
+  push:
+    paths:
+      - '.github/workflows/android14-compatibility.yml'
+  workflow_dispatch:
+permissions:
+  contents: read
+  actions: read
+jobs:
+  install-original-apk:
+    runs-on: ubuntu-22.04
+    timeout-minutes: 15
+    steps:
+      - uses: actions/setup-java@v4
+        with:
+          distribution: temurin
+          java-version: '17'
+      - uses: android-actions/setup-android@v3
+        with:
+          packages: platform-tools
+          log-accepted-android-sdk-licenses: false
+      - uses: actions/download-artifact@v4
+        with:
+          github-token: ${{ github.token }}
+          repository: letayaAnne/smart-pantry-manager
+          run-id: 39805812776
+          name: SmartPantry-APK-and-test-results
+          path: original
+      - name: Verify the exact distributed APK
+        run: |
+          mkdir -p evidence
+          cp original/app/build/outputs/apk/debug/app-debug.apk evidence/Smart_Pantry_Manager.apk
+          echo '2e29560bc6c6d334ee0f53a733d1b50c3d668bea256b653a7a3a24733d46c022  evidence/Smart_Pantry_Manager.apk' | sha256sum -c -
+          sdkmanager 'build-tools;35.0.0'
+          "$ANDROID_HOME/build-tools/35.0.0/apksigner" verify --verbose --min-sdk-version 34 --max-sdk-version 34 evidence/Smart_Pantry_Manager.apk | tee evidence/signature.txt
+      - name: Enable KVM
+        run: |
+          echo 'KERNEL=="kvm", GROUP="kvm", MODE="0666", OPTIONS+="static_node=kvm"' | sudo tee /etc/udev/rules.d/99-kvm4all.rules
+          sudo udevadm control --reload-rules
+          sudo udevadm trigger --name-match=kvm
+      - name: Install and launch on Android 14
+        uses: reactivecircus/android-emulator-runner@v2
+        with:
+          api-level: 34
+          arch: x86_64
+          profile: pixel_2
+          disable-animations: true
+          script: |
+            adb shell getprop ro.build.version.release | tee evidence/android-version.txt
+            adb install evidence/Smart_Pantry_Manager.apk | tee evidence/install.txt
+            adb shell am start -W -n za.co.letaya.smartpantry/.PantryActivity | tee evidence/launch.txt
+            sleep 5
+            adb shell pidof za.co.letaya.smartpantry | tee evidence/process.txt
+            test -s evidence/process.txt
+            adb shell dumpsys activity activities > evidence/activities.txt
+            grep -E 'mResumedActivity.*za.co.letaya.smartpantry' evidence/activities.txt
+            adb shell screencap -p /sdcard/android14.png
+            adb pull /sdcard/android14.png evidence/android14.png
+      - uses: actions/upload-artifact@v4
+        if: always()
+        with:
+          name: Android14-original-APK-diagnostic
+          path: evidence/
