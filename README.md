@@ -55,8 +55,3 @@ There are no third-party runtime dependencies. JUnit is used only in tests.
 ## Scope
 No location, maps, payments, accounts or network permissions. The app does not
 assume staples: even water, oil and salt must be present if a recipe requires them.
-
-## Simulated planning exercise
-[Simulated one-month development schedule](docs/SIMULATED_DEVELOPMENT_SCHEDULE.md)
-models 22 September–22 October 2026 for the fictional student scenario. It is a
-planning exercise, separate from the actual commit history and test evidence.
