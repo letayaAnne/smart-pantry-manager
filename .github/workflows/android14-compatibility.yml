@@ -48,13 +48,15 @@ jobs:
           disable-animations: true
           script: |
             adb shell getprop ro.build.version.release | tee evidence/android-version.txt
-            adb install evidence/Smart_Pantry_Manager.apk | tee evidence/install.txt
+            adb install evidence/Smart_Pantry_Manager.apk 2>&1 | tee evidence/install.txt
+            grep -x 'Success' evidence/install.txt
             adb shell am start -W -n za.co.letaya.smartpantry/.PantryActivity | tee evidence/launch.txt
+            grep -x 'Status: ok' evidence/launch.txt
             sleep 5
             adb shell pidof za.co.letaya.smartpantry | tee evidence/process.txt
             test -s evidence/process.txt
             adb shell dumpsys activity activities > evidence/activities.txt
-            grep -E 'mResumedActivity.*za.co.letaya.smartpantry' evidence/activities.txt
+            grep -E '(topResumedActivity|mResumedActivity).*za.co.letaya.smartpantry' evidence/activities.txt
             adb shell screencap -p /sdcard/android14.png
             adb pull /sdcard/android14.png evidence/android14.png
       - uses: actions/upload-artifact@v4
