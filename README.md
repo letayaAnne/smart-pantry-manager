@@ -16,8 +16,10 @@ The current project compiles and its 30 unit tests pass. Android Lint has passed
 its error gate; warnings are not claimed to be absent. The Actions workflow also
 runs a fresh emulator, checks CRUD and matching, captures actual screenshots,
 and checks persistence after force-stop/relaunch. Consult the latest completed
-Actions run for its result. Samsung A23 testing and the student's narrated video
-are separate remaining tasks.
+Actions run for its result. On 27 October 2026, the student reported successful
+installation and core manual acceptance checks on a Samsung A23 running Android 14
+and One UI 6.1. See [phone test results](docs/PHONE_TEST_RESULTS.md) for the tested
+scope. The narrated video and remaining acceptance checks still need completion.
 
 ## Database choice
 SQLiteOpenHelper: local relational storage, no account or internet required, and a direct
