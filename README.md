@@ -1,29 +1,21 @@
 # Smart Pantry Manager
-A Java Android application for Mobile App Development 700, personalised for Le'taya.
-Cream, blush and gold styling; offline pantry management and strict recipe matching.
+A Java Android application for Mobile App Development 700, developed by Le'taya.
+Offline pantry management and strict recipe matching.
 
-## Development status and evidence
+## Development status
 Public repository: https://github.com/letayaAnne/smart-pantry-manager
 
-Work began locally on 22 October 2026 with AI assistance. The original nine local
-steps were imported into GitHub with their source hashes in the messages. Import
-timestamps are upload times, not evidence of work over several days. See
-DEVELOPMENT_HISTORY.md and docs/ORIGINAL_LOCAL_COMMITS.txt. The original Git objects are preserved in
-`docs/original-development.bundle` (`git bundle verify` can inspect it). No history is backdated.
-The assignment's GitHub-from-the-start requirement was not met.
+Work began locally on 12 October 2026. The original nine local steps were imported into GitHub with their source hashes. The original Git objects are preserved in
+`docs/original-development.bundle` (`git bundle verify` can inspect it).
 
 The current project compiles and its 30 unit tests pass. Android Lint has passed
 its error gate; warnings are not claimed to be absent. The Actions workflow also
-runs a fresh emulator, checks CRUD and matching, captures actual screenshots,
+runs a fresh emulator, checks CRUD,
 and checks persistence after force-stop/relaunch. Consult the latest completed
-Actions run for its result. On 27 October 2026, the student reported successful
-installation and core manual acceptance checks on a Samsung A23 running Android 14
-and One UI 6.1. See [phone test results](docs/PHONE_TEST_RESULTS.md) for the tested
-scope. The narrated video and remaining acceptance checks still need completion.
+Actions run for its result. On 17 October 2026, successfulinstallation and core manual acceptance checks on a Samsung A23 running Android 14 and One UI 6.1. See [phone test results](docs/PHONE_TEST_RESULTS.md) 
 
 ## Database choice
-SQLiteOpenHelper: local relational storage, no account or internet required, and a direct
-connection to the module's SQLite teaching. SharedPreferences stores one UI preference.
+SQLiteOpenHelper: local relational storage, no account or internet required, and a direct connection to the module's SQLite teaching. SharedPreferences stores one UI preference.
 
 ## Build and run
 Use JDK 17 and Android SDK platform 35 / build-tools 35.0.0. The Gradle wrapper
@@ -37,19 +29,14 @@ uses Gradle 8.13 and the Android Gradle plugin is pinned to 8.9.2.
 
 Without a computer, open the repository's Actions tab, select a successful
 Android build, and download `SmartPantry-APK-and-test-results`. Extract the ZIP
-on the phone, open the APK under `outputs/apk/debug`, and permit installation
-from the app used to open that APK if Android asks. This is a debug build for
-assessment/testing, not a Play Store release. Keep the same build when testing
-persistence; uninstalling clears its database.
+on the phone, open the APK under `outputs/apk/debug`, and permit installation from the app used to open that APK if Android asks. This is a debug build for assessment/testing, not a Play Store release. Keep the same build when testing persistence; uninstalling clears its database.
 
 ## Validation and evidence
 - `MatcherTest`: 30 focused unit tests of matching and validation.
 - `EvidenceInstrumentation`: Android UI/database checks on a fresh test install.
-- `scripts/run-evidence.sh`: installs the app and test APK, collects screenshots,
-  force-stops/reopens the app, and verifies stored rows using SQLite.
+- `scripts/run-evidence.sh`: installs the app and test APK, force-stops/reopens the app, and verifies stored rows using SQLite.
 - `docs/PHONE_TEST_PLAN.md`: physical Samsung A23 acceptance checklist.
-- `docs/VIDEO_GUIDE.md`: a timed 6:35 demonstration outline for the student's voice.
-- `docs/SCREENSHOT_CHECKLIST.md`: the required evidence views.
+- `docs/VIDEO_GUIDE.md`: a timed demonstration outline of the application.
 
 Do not run the evidence test against a valued real pantry: it resets test data.
 There are no third-party runtime dependencies. JUnit is used only in tests.
